@@ -84,6 +84,10 @@
         
       </ul>
 
+      <form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
+</form>
       <ul id="navbar-icon-links" class="navbar-nav" aria-label="Icon Links">
         <li class="nav-item">
           <a class="nav-link" href="https://github.com/pyansys/" rel="noopener" target="_blank" title="GitHub">
@@ -108,11 +112,7 @@
           
             
             <!-- Only show if we have sidebars configured, else just a small margin  -->
-            <div class="col-12 col-md-3 bd-sidebar"><form class="bd-search d-flex align-items-center" action="search.html" method="get">
-  <i class="icon fas fa-search"></i>
-  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
-</form>
-<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+            <div class="col-12 col-md-3 bd-sidebar"><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
   <div class="bd-toc-item active">
     
   </div>
@@ -131,7 +131,7 @@
 <nav id="bd-toc-nav">
     <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#pymapdl">
+  <a class="reference internal nav-link" href="#id1">
    PyMAPDL
   </a>
   <ul class="nav section-nav flex-column">
@@ -145,33 +145,16 @@
      Usage
     </a>
    </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#resources-and-links">
+     Resources and Links
+    </a>
+   </li>
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#dpf-core">
+  <a class="reference internal nav-link" href="#id2">
    DPF-Core
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#id1">
-     Installation
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#id2">
-     Usage
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#more-resources">
-     More Resources
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#dpf-post">
-   DPF-Post
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
@@ -180,14 +163,41 @@
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#example-usage">
-     Example Usage
+    <a class="reference internal nav-link" href="#id4">
+     Usage
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id5">
+     Resources and Links
     </a>
    </li>
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#legacy-pymapdl-reader">
+  <a class="reference internal nav-link" href="#id6">
+   DPF-Post
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id7">
+     Installation
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#example-usage">
+     Example Usage
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id8">
+     Resources and Links
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id9">
    Legacy PyMAPDL Reader
   </a>
   <ul class="nav section-nav flex-column">
@@ -209,9 +219,16 @@
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#id6">
+  <a class="reference internal nav-link" href="#id12">
    Installation
   </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id13">
+     Resources and Links
+    </a>
+   </li>
+  </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#license-and-acknowledgments">
@@ -246,7 +263,17 @@ focused on MAPDL and post processing of MAPDL related files, but will
 grow to encompass more products and features as the project develops
 and matures.</p>
 <p>This project originally began as a single package, <code class="docutils literal notranslate"><span class="pre">pyansys</span></code>, and
-has been expanded to four main packages and a few supporting packages.</p>
+has been expanded to four main packages:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://mapdldocs.pyansys.com/">PyMAPDL</a> : Pythonic interface to MAPDL</p></li>
+<li><p><a class="reference external" href="https://dpfdocs.pyansys.com/">DPF-Core</a> : Post-Processing using the Data Processing Framework (DPF).  More complex yet and more powerful post-processing APIs.</p></li>
+<li><p><a class="reference external" href="https://postdocs.pyansys.com/">DPF-Post</a> : Streamlined and simplified DPF Post Processing.  Higher level package and uses <code class="docutils literal notranslate"><span class="pre">DPF-Core</span></code>.</p></li>
+<li><p><a class="reference external" href="https://readerdocs.pyansys.com/">Legacy PyMAPDL Reader</a>: Legacy result file reader.  Supports result files from MAPDL v14.5 to the current release.</p></li>
+</ul>
+<p>This is an expanding and developing project.  Feel free to post issues
+on the various GitHub pages in this document.  For additional support,
+contact the maintainer of this project at <a class="reference external" href="mailto:alexander&#46;kaszynski&#37;&#52;&#48;ansys&#46;com">Alex Kaszynski</a> and your requests will be
+routed correctly.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>To use PyAnsys you need to install the applicable packages for your
@@ -262,8 +289,8 @@ product:</p>
 <li><p><code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">ansys-mapdl-reader</span></code></p></li>
 </ul>
 </div>
-<div class="section" id="pymapdl">
-<h2>PyMAPDL<a class="headerlink" href="#pymapdl" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id1">
+<h2>PyMAPDL<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
 <p>The <code class="docutils literal notranslate"><span class="pre">PyAnsys</span></code> project supports Pythonic access to MAPDL to be able
 to communicate with the MAPDL process directly from Python.  The
 original <code class="docutils literal notranslate"><span class="pre">PyAnsys</span></code> project was limited to either the console or
@@ -313,6 +340,9 @@ example, inputting points from a numpy array:</p>
     <span class="n">mapdl</span><span class="o">.</span><span class="n">k</span><span class="p">(</span><span class="n">i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">z</span><span class="p">)</span>
 </pre></div>
 </div>
+</div>
+<div class="section" id="resources-and-links">
+<h3>Resources and Links<a class="headerlink" href="#resources-and-links" title="Permalink to this headline">¶</a></h3>
 <p>For more details, see:</p>
 <blockquote>
 <div><ul class="simple">
@@ -323,8 +353,8 @@ example, inputting points from a numpy array:</p>
 </div></blockquote>
 </div>
 </div>
-<div class="section" id="dpf-core">
-<h2>DPF-Core<a class="headerlink" href="#dpf-core" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id2">
+<h2>DPF-Core<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>DPF-Core is available for Ansys 2021R1 and newer.</p>
@@ -345,15 +375,15 @@ product designed to handle large amount of data.</p>
 the powerful DPF framework enabling rapid post-processing of a variety
 of Ansys file formats and physics solutions without ever leaving a
 Python environment.</p>
-<div class="section" id="id1">
-<h3>Installation<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id3">
+<h3>Installation<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h3>
 <p>Install this repository with:</p>
 <p><code class="docutils literal notranslate"><span class="pre">`</span>
 <span class="pre">pip</span> <span class="pre">install</span> <span class="pre">ansys-dpf-core</span>
 <span class="pre">`</span></code></p>
 </div>
-<div class="section" id="id2">
-<h3>Usage<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id4">
+<h3>Usage<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h3>
 <p>Provided you have Ansys 2021R1 installed, a DPF server will start
 automatically once you start using DPF from python.</p>
 <p>Opening a result file generated from Ansys workbench or MAPDL is as easy as:</p>
@@ -379,8 +409,8 @@ automatically once you start using DPF from python.</p>
 </pre></div>
 </div>
 </div>
-<div class="section" id="more-resources">
-<h3>More Resources<a class="headerlink" href="#more-resources" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id5">
+<h3>Resources and Links<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h3>
 <p>For more details, see:</p>
 <blockquote>
 <div><ul class="simple">
@@ -391,8 +421,8 @@ automatically once you start using DPF from python.</p>
 </div></blockquote>
 </div>
 </div>
-<div class="section" id="dpf-post">
-<h2>DPF-Post<a class="headerlink" href="#dpf-post" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id6">
+<h2>DPF-Post<a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h2>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>DPF-Post is available for Ansys 2021R1 and newer.</p>
@@ -409,8 +439,8 @@ leaving a Python environment.</p>
 <p>This module leverages the DPF-Core project’s <code class="docutils literal notranslate"><span class="pre">ansys.dpf.core</span></code>
 package, which can be used to build more advanced and customized
 workflows using Ansys’s DPF.</p>
-<div class="section" id="id3">
-<h3>Installation<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id7">
+<h3>Installation<a class="headerlink" href="#id7" title="Permalink to this headline">¶</a></h3>
 <p>Install this repository with:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="n">ansys</span><span class="o">-</span><span class="n">dpf</span><span class="o">-</span><span class="n">post</span>
 </pre></div>
@@ -430,9 +460,9 @@ MAPDL is as easy as:</p>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">stress</span><span class="o">.</span><span class="n">xx</span><span class="o">.</span><span class="n">plot_contour</span><span class="p">(</span><span class="n">show_edges</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
 </pre></div>
 </div>
-<div class="figure align-default" id="id7">
+<div class="figure align-default" id="id14">
 <a class="reference internal image-reference" href="https://github.com/pyansys/dpf-post/raw/master/docs/source/images/main_example.png"><img alt="https://github.com/pyansys/dpf-post/raw/master/docs/source/images/main_example.png" src="https://github.com/pyansys/dpf-post/raw/master/docs/source/images/main_example.png" style="width: 400pt;" /></a>
-<p class="caption"><span class="caption-text">Example Stress Plot</span><a class="headerlink" href="#id7" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text">Example Stress Plot</span><a class="headerlink" href="#id14" title="Permalink to this image">¶</a></p>
 </div>
 <p>Or extract the raw data as a <cite>numpy</cite> array with:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">stress</span><span class="o">.</span><span class="n">xx</span><span class="o">.</span><span class="n">get_data_at_field</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
@@ -441,9 +471,20 @@ MAPDL is as easy as:</p>
 </pre></div>
 </div>
 </div>
+<div class="section" id="id8">
+<h3>Resources and Links<a class="headerlink" href="#id8" title="Permalink to this headline">¶</a></h3>
+<p>For more details, see:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><a class="reference external" href="https://dpfdocs.pyansys.com/">DPF-Post Documentation</a></p></li>
+<li><p><a class="reference external" href="https://pypi.org/project/ansys-dpf-core/">DPF-Post PyPi</a></p></li>
+<li><p><a class="reference external" href="https://github.com/pyansys/DPF-Post">DPF-Post GitHub</a></p></li>
+</ul>
+</div></blockquote>
 </div>
-<div class="section" id="legacy-pymapdl-reader">
-<h2>Legacy PyMAPDL Reader<a class="headerlink" href="#legacy-pymapdl-reader" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="id9">
+<h2>Legacy PyMAPDL Reader<a class="headerlink" href="#id9" title="Permalink to this headline">¶</a></h2>
 <p>This is the legacy module for reading in binary and ASCII files
 generated from MAPDL.</p>
 <p>This Python module allows you to extract data directly from binary
@@ -598,14 +639,25 @@ displayed.</p>
 </div>
 </div>
 </div>
-<div class="section" id="id6">
-<h2>Installation<a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id12">
+<h2>Installation<a class="headerlink" href="#id12" title="Permalink to this headline">¶</a></h2>
 <p>Installation through pip:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="n">ansys</span><span class="o">-</span><span class="n">mapdl</span><span class="o">-</span><span class="n">reader</span>
 </pre></div>
 </div>
 <p>You can also visit <a class="reference external" href="https://github.com/pyansys/pymapdl-reader">pymapdl-reader</a>
 to download the source or releases from GitHub.</p>
+<div class="section" id="id13">
+<h3>Resources and Links<a class="headerlink" href="#id13" title="Permalink to this headline">¶</a></h3>
+<p>For more details, see:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><a class="reference external" href="https://readerdocs.pyansys.com/">Legacy PyMAPDL Reader Documentation</a></p></li>
+<li><p><a class="reference external" href="https://pypi.org/project/ansys-mapdl-reader/">Legacy PyMAPDL Reader PyPi</a></p></li>
+<li><p><a class="reference external" href="https://github.com/pyansys/pymapdl-reader">Legacy PyMAPDL Reader GitHub</a></p></li>
+</ul>
+</div></blockquote>
+</div>
 </div>
 <div class="section" id="license-and-acknowledgments">
 <h2>License and Acknowledgments<a class="headerlink" href="#license-and-acknowledgments" title="Permalink to this headline">¶</a></h2>
